@@ -264,3 +264,22 @@ I love lyoma I love lghda and i will love u forever✨🤎`;
   </script>
 </body>
 </html>
+
+# Aya 💖
+
+## صور اللعبة
+![Catch Aya](https://github.com/Mk0123811819/aya/blob/main/aya_ds/images/catch_aya.png?raw=true)
+
+### القلوب والفراشات
+![Aya 1]([images/aya_1.png](https://github.com/Mk0123811819/aya/blob/main/aya_ds/images/aya_1.png?raw=true))
+![Aya 2]([images/aya_2.png](https://github.com/Mk0123811819/aya/blob/main/aya_ds/images/aya_2.png?raw=true))
+![Aya 3]([images/aya_3.png](https://github.com/Mk0123811819/aya/blob/main/aya_ds/images/aya_3.png?raw=true))
+![Aya 4]([images/aya_4.png](https://github.com/Mk0123811819/aya/blob/main/aya_ds/images/aya_4.png?raw=true))
+![Aya 5]([images/aya_5.png](https://github.com/Mk0123811819/aya/blob/main/aya_ds/images/aya_5.png?raw=true))
+![Aya 6]([images/aya_6.png](https://github.com/Mk0123811819/aya/blob/main/aya_ds/images/aya_6.png?raw=true))
+![Aya 7]([images/aya_7.png](https://github.com/Mk0123811819/aya/blob/main/aya_ds/images/aya_7.png?raw=true))
+
+## موسيقى الخلفية
+يمكنك الاستماع للموسيقى من الرابط أو رفعها على الموقع مباشرة:
+
+[audio/me_gustas_tu.mp3]([audio/me_gustas_tu.mp3](https://github.com/Mk0123811819/aya/blob/main/aya_ds/audio/me_gustas_tu.mp3))
