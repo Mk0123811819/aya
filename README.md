@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: 'Courier New', monospace;
-      background: linear-gradient(to bottom right, #2c2c2c, #1a1a1a); /* Dark mode default */
+      background: linear-gradient(to bottom right, #2c2c2c, #1a1a1a);
       color: #f5f5f5;
       overflow: hidden;
       text-align: center;
@@ -72,9 +72,14 @@
       font-size: 20px;
       white-space: pre-line;
       max-width: 80%;
+      max-height: 60vh;
       margin: 20px auto;
       position: relative;
       z-index: 20;
+      overflow-y: auto;
+      padding: 10px;
+      background: rgba(0,0,0,0.1);
+      border-radius: 10px;
     }
 
     .heart, .butterfly {
