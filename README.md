@@ -60,10 +60,10 @@ button {
 
 #catchable-image {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 120px;
   cursor: pointer;
-  border-radius: 50%;
+  border-radius: 0; /* مستطيل */
   transition: left 0.5s, top 0.5s;
   z-index: 10;
 }
@@ -82,7 +82,7 @@ button {
   border-radius: 10px;
 }
 
-.heart, .butterfly {
+.heart {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -90,6 +90,11 @@ button {
   z-index: 5;
   pointer-events: none;
   transition: top 0.1s;
+  clip-path: polygon(
+    50% 0%, 61% 5%, 68% 10%, 75% 20%, 85% 35%, 90% 50%,
+    85% 65%, 75% 75%, 60% 90%, 50% 100%, 40% 90%, 25% 75%,
+    15% 65%, 10% 50%, 15% 35%, 25% 20%, 32% 10%, 39% 5%
+  );
 }
 
 #timer {
@@ -124,7 +129,7 @@ button {
 <h2 id="changingName">Aya 💖</h2>
 <div id="message"></div>
 <div id="timer"></div>
-<audio id="background-music" src="https://github.com/Mk0123811819/aya/blob/main/aya_ds/audio/me_gustas_tu.mp3?raw=true" autoplay loop></audio>
+<audio id="background-music" src="https://github.com/Mk0123811819/aya/blob/main/aya_ds/audio/me_gustas_tu.mp3?raw=true" loop></audio>
 <button id="themeToggle">Switch Theme</button>
 </section>
 
@@ -169,7 +174,7 @@ setInterval(moveImageRandomly, 2000);
 
 // Click catch image
 image.addEventListener('click', () => {
-  music.play();
+  music.play(); // الموسيقى تبدأ هنا
   gameSection.classList.remove('active');
   mainMessageSection.classList.add('active');
   startMainPage();
@@ -219,8 +224,8 @@ function startTimer() {
   }, 1000);
 }
 
-// Floating hearts & butterflies
-const heartsAndButterflies = [
+// Floating hearts
+const hearts = [
   "https://github.com/Mk0123811819/aya/blob/main/aya_ds/images/aya_1.png?raw=true",
   "https://github.com/Mk0123811819/aya/blob/main/aya_ds/images/aya_2.png?raw=true",
   "https://github.com/Mk0123811819/aya/blob/main/aya_ds/images/aya_3.png?raw=true",
@@ -231,11 +236,11 @@ const heartsAndButterflies = [
 ];
 
 function createFloating() {
-  const index = Math.floor(Math.random() * heartsAndButterflies.length);
-  const src = heartsAndButterflies[index];
+  const idx = Math.floor(Math.random() * hearts.length);
+  const src = hearts[idx];
   const el = document.createElement("img");
   el.src = src;
-  el.className = Math.random() < 0.5 ? "heart" : "butterfly";
+  el.className = "heart";
   el.style.left = Math.random() * (window.innerWidth - 50) + "px";
   el.style.top = "-60px";
   el.style.width = "50px";
@@ -255,7 +260,6 @@ function createFloating() {
   }, 20);
 }
 
-// Start main page
 function startMainPage() {
   typeWriter();
   setInterval(createFloating, 500);
